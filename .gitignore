@@ -1,3 +1,6 @@
 venv
 venv310
 Temp
+__pycache__
+core\__pycache__
+test.py
