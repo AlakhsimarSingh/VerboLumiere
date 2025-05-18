@@ -14,7 +14,6 @@ def process_input_basic(input_path, input_type="video", target_lang="en"):
     if not os.path.exists("Temp"):
         os.makedirs("Temp")
 
-    # Extract audio
     if input_type == "video":
         video = VideoFileClip(input_path)
         video.audio.write_audiofile(temp_audio_path, codec='pcm_s16le')
@@ -25,7 +24,6 @@ def process_input_basic(input_path, input_type="video", target_lang="en"):
     else:
         raise ValueError("Unsupported input type. Use 'video' or 'audio'.")
 
-    # Process
     transcript = transcribe_audio(temp_audio_path)
     translated = translate_text(transcript, target_lang)
     save_subtitles(translated, srt_path)
@@ -34,7 +32,6 @@ def process_input_basic(input_path, input_type="video", target_lang="en"):
     if input_type == "video":
         burn_subtitles_on_video(input_path, srt_path, subtitle_video_path)
 
-    # Cleanup
     if input_type == "video" and os.path.exists(temp_audio_path):
         os.remove(temp_audio_path)
 

@@ -3,7 +3,7 @@ import subprocess
 def save_subtitles(translated_text, output_srt="Temp/output.srt"):
     with open(output_srt, "w") as f:
         f.write("1\n")
-        f.write("00:00:00,000 --> 00:01:00,000\n")  # covers entire video duration
+        f.write("00:00:00,000 --> 00:01:00,000\n")  
         f.write(translated_text.strip() + "\n")
 
 # Burn subtitles on video
