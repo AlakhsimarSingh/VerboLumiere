@@ -40,19 +40,19 @@ A stunning black background interface with glowing neon pink accents for a visua
 ## 📸 Screenshots
 
 ###  Login Page  
-![Login Page](ReadmeMedia\image.png)
+![Login Page](ReadmeMedia/image.png)
 
 ###  Registeration Page  
-![Login Page](ReadmeMedia\registeration.png)
+![Login Page](ReadmeMedia/registeration.png)
 
 ###  Dashboard  
-![Dashboard Screenshot](ReadmeMedia\dashboard.png)
+![Dashboard Screenshot](ReadmeMedia/dashboard.png)
 
 ### 📤 Upload Page  
-![Upload Screenshot](ReadmeMedia\upload.png)
+![Upload Screenshot](ReadmeMedia/upload.png)
 
 ### 📝 Transcript and Translated Media  
-![Results Screenshot](ReadmeMedia\translated.png)
+![Results Screenshot](ReadmeMedia/translated.png)
 
 ---
 
