@@ -4,3 +4,51 @@ Temp
 __pycache__
 core\__pycache__
 test.py
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+local_settings.py
+.env
+
+# Virtualenv
+venv/
+env/
+ENV/
+.venv/
+.pytest_cache/
+
+# VS Code / IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# pip environment management
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Translation cache
+__translated_cache__/
+
+# Uploaded files (optional)
+uploads/
+*.mp4
+*.mp3
+*.wav
+*.srt
