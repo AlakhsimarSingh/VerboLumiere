@@ -1,0 +1,36 @@
+{% extends 'processor/base.html' %}
+{% block title %}Translation Result{% endblock %}
+{% block content %}
+<h2>Translated Results for {{ video.original_video.name|slice:"10:" }}</h2>
+<hr>
+
+<h4>Transcript:</h4>
+{% if video.transcript %}
+<pre style="padding:10px;">{{ video.transcript }}</pre>
+{% else %}
+<p>No transcript available.</p>
+{% endif %}
+
+
+<h4>Translated Audio:</h4>
+{% if video.translated_audio %}
+<audio controls>
+    <source src="{{ video.translated_audio.url }}" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+{% else %}
+<p>Translated audio not available.</p>
+{% endif %}
+<br>
+<h4>Subtitled Video:</h4>
+{% if video.translated_video %}
+<video width="480" controls>
+    <source src="{{ video.translated_video.url }}" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+{% else %}
+<p>Translated video not available.</p>
+{% endif %}
+
+<a href="{% url 'dashboard' %}" class="btn btn-secondary mt-3">Back to Dashboard</a>
+{% endblock %}

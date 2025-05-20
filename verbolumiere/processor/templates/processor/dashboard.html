@@ -1,0 +1,40 @@
+{% extends 'processor/base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h2>Welcome, {{ user.username }}</h2>
+<hr>
+<div class="mb-3 text-end">
+    <a href="{% url 'upload' %}" class="btn btn-success">+ Upload New Video</a>
+</div>
+<h4>Your Uploaded Videos</h4>
+
+{% if videos %}
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Filename</th>
+                <th>Uploaded At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for video in videos %}
+            <tr>
+                <td>{{ video.original_video.name|default:"Unnamed" }}</td>
+                <td>{{ video.created_at|date:"M d, Y H:i" }}</td>
+
+                <td>
+                    <a href="{% url 'translate' video.id %}" class="btn btn-sm btn-primary">Translate</a>
+                    {% comment %} <a href="{% url 'download_translated_video' video.id %}" class="btn btn-sm btn-success">Download Video</a> {% endcomment %}
+                    {% comment %} <a href="{% url 'download_transcript' video.id %}" class="btn btn-sm btn-secondary">Download Transcript</a> {% endcomment %}
+                    {% comment %} <a href="{% url 'download_translated_audio' video.id %}" class="btn btn-sm btn-info">Audio</a> {% endcomment %}
+                    <a href="{% url 'delete_video' video.id %}" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No videos uploaded yet.</p>
+{% endif %}
+{% endblock %}
