@@ -91,6 +91,9 @@ These models work seamlessly together in VerboLumiere, enabling real-time or bat
 ### 📝 Transcript and Translated Media  
 ![Results Screenshot](ReadmeMedia/translated.png)
 
+### Admin Panel
+![alt text](ReadmeMedia/admin.png)
+
 ---
 
 ##  Tech Stack
