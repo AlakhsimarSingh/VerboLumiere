@@ -41,6 +41,7 @@ Useful for debugging and moderation
 
 ###  Neon-Themed UI
 A stunning black background interface with glowing neon pink accents for a visually captivating experience. Mobile-friendly with media queries included.
+
 ---
 ## 📊 Model Performance
 VerboLumiere integrates cutting-edge models for transcription and translation, optimized for multilingual and real-world audio/video scenarios.
